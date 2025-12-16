@@ -1,20 +1,14 @@
-# Panel Termux
+cat > README.md << 'EOF'
+# 🔥 Panel Termux
 
-Panel CLI Termux berbasis Bash dengan login dan submenu.
+Panel sederhana untuk Termux dengan menu interaktif.
 
-## Cara Install
+## 🚀 Install
+```bash
 pkg update && pkg upgrade
-pkg install git -y
-git clone https://github.com/USERNAME/panel-termux.git
+pkg install git
+git clone https://github.com/Ralzxc0de/panel-termux
 cd panel-termux
-chmod +x panel.sh
+chmod +x install.sh panel.sh
+./install.sh
 ./panel.sh
-
-## Fitur
-- Login password
-- Menu & submenu
-- Tampilan warna
-- Aman (dummy)
-
-## Author
-RALZ-CODEX
