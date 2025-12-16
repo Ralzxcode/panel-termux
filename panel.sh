@@ -1,96 +1,48 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash
+clear
 
-# =============================
-# WARNA
-# =============================
-MERAH="\e[31m"
-HIJAU="\e[32m"
-KUNING="\e[33m"
-BIRU="\e[34m"
-RESET="\e[0m"
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+CYAN='\033[1;36m'
+WHITE='\033[1;37m'
+NC='\033[0m'
 
-# =============================
-# HEADER
-# =============================
-header() {
-    clear
-    figlet -f slant "HACK PANEL" | lolcat
-    echo -e "${MERAH}========================================${RESET}"
-    echo -e "${HIJAU}   Ethical Hacking Learning Dashboard   ${RESET}"
-    echo -e "${MERAH}========================================${RESET}"
-    echo
-}
+echo -e "${RED}"
+echo "██╗  ██╗ █████╗  ██████╗██╗  ██╗"
+echo "██║  ██║██╔══██╗██╔════╝██║ ██╔╝"
+echo "███████║███████║██║     █████╔╝ "
+echo "██╔══██║██╔══██║██║     ██╔═██╗ "
+echo "██║  ██║██║  ██║╚██████╗██║  ██╗"
+echo "╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝"
+echo -e "${WHITE}        PANEL TERMUX by Ralzxc0de${NC}"
+echo ""
 
-# =============================
-# MENU UTAMA
-# =============================
-menu_utama() {
-    echo -e "${KUNING}1.${RESET} Hacking Menu"
-    echo -e "${KUNING}2.${RESET} System Info"
-    echo -e "${KUNING}0.${RESET} Exit"
-    echo
-}
+echo -e "${CYAN}[1] Info System"
+echo "[2] Update Packages"
+echo "[3] Install Tools"
+echo "[4] Exit${NC}"
+echo ""
 
-# =============================
-# SUBMENU HACKING
-# =============================
-menu_hacking() {
-    while true
-    do
-        header
-        echo -e "${BIRU}1.${RESET} Info Sistem"
-        echo -e "${BIRU}2.${RESET} Lihat IP Device"
-        echo -e "${BIRU}3.${RESET} Scan Port Localhost"
-        echo -e "${BIRU}0.${RESET} Kembali"
-        echo
-        read -p "Pilih submenu: " hack
+read -p "Pilih menu > " menu
 
-        case $hack in
-            1)
-                uname -a
-                ;;
-            2)
-                ip addr || ifconfig
-                ;;
-            3)
-                pkg install nmap -y
-                nmap 127.0.0.1
-                ;;
-            0)
-                break
-                ;;
-            *)
-                echo -e "${MERAH}Pilihan salah!${RESET}"
-                ;;
-        esac
-        read -p "ENTER untuk lanjut..."
-    done
-}
+case $menu in
+1)
+  echo -e "${GREEN}User   : $(whoami)"
+  echo "OS     : $(uname -o)"
+  echo "Kernel : $(uname -r)${NC}"
+;;
+2)
+  pkg update && pkg upgrade -y
+;;
+3)
+  pkg install git curl wget nano -y
+;;
+4)
+  echo "Bye..."
+  exit
+;;
+*)
+  echo "Pilihan salah!"
+;;
+esac
 
-# =============================
-# PROGRAM UTAMA
-# =============================
-while true
-do
-    header
-    menu_utama
-    read -p "Pilih menu: " pilih
-
-    case $pilih in
-        1)
-            menu_hacking
-            ;;
-        2)
-            uname -a
-            read -p "ENTER untuk kembali..."
-            ;;
-        0)
-            echo -e "${MERAH}Keluar...${RESET}"
-            exit
-            ;;
-        *)
-            echo -e "${MERAH}Menu tidak ada!${RESET}"
-            read -p "ENTER..."
-            ;;
-    esac
-done
