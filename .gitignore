@@ -1,4 +1,1 @@
-.zsh_history
-.lesshst
-.panel_pids
-*.save
+*.tar.gz
