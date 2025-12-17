@@ -1,8 +1,3 @@
-Siap.
-Ini README GitHub PROFESIONAL, rapi, siap publik, dan cocok untuk panel ABSOLUTE ELITE kamu.
-👉 TINGGAL COPY–PASTE ke README.md
-
-
 ---
 
 🔥 ABSOLUTE ELITE PANEL
@@ -211,23 +206,4 @@ Power. Control. Identity.
 
 
 ---
-# ABSOLUTE ELITE PANEL
-
-## Features
-- Security login
-- Modular system
-- File manager
-- Network tools
-
-## Installation
-pkg install git
-git clone ...
-cd ...
-bash install.sh
-
-## Usage
-panel
-
-## Author
-Dho Nago
 
