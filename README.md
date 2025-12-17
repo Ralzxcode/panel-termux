@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 
 🔥 ABSOLUTE ELITE PANEL
@@ -207,3 +208,125 @@ Power. Control. Identity.
 
 ---
 
+=======
+# 🔥 ABSOLUTE ELITE PANEL
+
+> Terminal Control Panel for Termux  
+> Secure • Modular • Clean • Powerful
+
+ABSOLUTE ELITE PANEL adalah panel terminal berbasis **Bash** yang dirancang untuk pengguna **Termux** dengan fokus pada **keamanan, kemudahan, dan performa**.  
+Panel ini cocok untuk penggunaan pribadi, eksperimen, maupun project open-source.
+
+---
+
+## ✨ Features
+
+- 🔐 Secure login (SHA256 hash + anti brute force)
+- 🧩 Modular system (security terpisah)
+- 📁 File Manager
+- 🌐 Network tools
+- 🖥 System information
+- 🔌 Plugin support
+- ⚙️ Global control & config
+- 🚀 Auto-run command (`panel`)
+- 🛠 Clean installer (`install.sh`)
+
+---
+
+## 📦 Requirements
+
+- Termux (Android)
+- Bash
+- Coreutils
+- OpenSSL
+
+> Semua dependency akan di-install otomatis oleh installer.
+
+---
+
+## 🚀 Installation
+
+```bash
+pkg install git -y
+git clone https://github.com/Ralzxcode/hack-panel
+cd hack-panel
+bash install.sh
+
+Setelah instalasi selesai, jalankan panel dengan:
+
+panel
+
+
+---
+
+🔐 Security
+
+Password disimpan dalam bentuk hash (SHA256)
+
+Proteksi brute force (auto lock)
+
+Permission ketat pada direktori security
+
+Support DEV_MODE untuk debugging
+
+
+Reset password (jika lupa):
+
+rm -rf ~/.panel_security
+panel
+
+
+---
+
+🔌 Plugin System
+
+Plugin disimpan di folder:
+plugins/
+
+Contoh plugin sederhana:
+
+#!/bin/bash
+echo "Hello from plugin!"
+
+
+---
+
+🛠 Project Structure
+
+hack-panel/
+├── ralz-panel.sh     # Main panel
+├── security.sh       # Security module
+├── install.sh        # Installer
+├── plugins/          # Plugin directory
+├── README.md
+
+
+---
+
+👤 Author
+
+Dho Nago
+Creator & Maintainer
+
+
+---
+
+⚠️ Disclaimer
+
+Project ini dibuat untuk pembelajaran dan penggunaan pribadi.
+Gunakan dengan tanggung jawab penuh.
+Author tidak bertanggung jawab atas penyalahgunaan.
+
+
+---
+
+⭐ Support
+
+Jika kamu merasa project ini bermanfaat:
+
+⭐ Star repository
+
+🧠 Fork & improve
+
+💬 Share feedback
+>>>>>>> a9cb715 (Add professional README)
