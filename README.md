@@ -211,14 +211,23 @@ Power. Control. Identity.
 
 
 ---
+# ABSOLUTE ELITE PANEL
 
-Kalau mau, aku bisa:
+## Features
+- Security login
+- Modular system
+- File manager
+- Network tools
 
-✍️ sesuaikan README versi private / publik
+## Installation
+pkg install git
+git clone ...
+cd ...
+bash install.sh
 
-🖼️ tambahkan badge, screenshot, atau logo
+## Usage
+panel
 
-📦 buat template rilis GitHub
+## Author
+Dho Nago
 
-
-Tinggal bilang 🔥
